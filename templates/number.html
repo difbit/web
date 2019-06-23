@@ -1,0 +1,28 @@
+<html>
+<body>
+	<span>Write a number</span>
+
+	<p>
+		x <input type="text" id="txt1" onkeyup="showMore(this.value)">
+	</p>
+
+	<p>
+		x<sup>2</sup> 
+		<span id="hint"></span>
+	</p>
+
+	<script>
+		function showMore(str) {
+			if (str.length == 0) {
+				document.getElementById("hint").innerHTML = "";
+				return;
+			}
+			else {
+				document.getElementById("hint").innerHTML = 
+					str.valueOf()**2;
+				return;
+			}
+		}
+	</script>
+</body>
+</html>
